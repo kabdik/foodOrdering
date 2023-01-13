@@ -2,10 +2,10 @@ import { BaseEntity } from "@/common/entities/base.entity";
 import { TableName } from "@/common/enums/table";
 import { CityEntity } from "@/modules/cities/city.entity";
 import { Column, Entity, JoinColumn, ManyToOne } from "typeorm";
-import type { Organization } from "../interfaces/organization.interface";
+import type {  Restaurant } from "../interfaces/restaurant.interface";
 
-@Entity(TableName.ORGANIZATION)
-export class OrganizationEntity extends BaseEntity implements Organization {
+@Entity(TableName.RESTAURANT)
+export class RestaurantEntity extends BaseEntity implements Restaurant {
     @Column('varchar')
     name!:string
 

@@ -1,6 +1,6 @@
 import type { BaseEntity } from '@/common/entities/base.entity';
 
-export interface Organization extends BaseEntity {
+export interface Restaurant extends BaseEntity {
   name:string;
   phone:string;
   cityId:number;

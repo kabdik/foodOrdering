@@ -1,4 +1,4 @@
 export enum TableName {
   CITY = 'city',
-  ORGANIZATION = 'organization',
+  RESTAURANT = 'restaurant',
 }

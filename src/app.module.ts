@@ -22,11 +22,13 @@ import { DbConfig } from './config/db.config';
 import { RedisConfig } from './config/redis.config';
 import { SentryConfig } from './config/sentry.config';
 import { ServerConfig } from './config/server.config';
+import { AdminJSModule } from './modules/adminjs/adminjs.module';
 import { CityModule } from './modules/cities/city.module';
-import { OrganizationModule } from './modules/organization/organization.module';
+import { RestaurantModule } from './modules/restaurant/restaurant.module';
 
 @Module({
   imports: [
+    AdminJSModule,
     SentryModule.forRoot({
       dsn: SentryConfig.SENTRY_DSN,
       debug: false,
@@ -55,7 +57,7 @@ import { OrganizationModule } from './modules/organization/organization.module';
     }),
     // Service Modules
     CommonModule, // Global
-    OrganizationModule,
+    RestaurantModule,
     CityModule,
     // Module Router
     // https://docs.nestjs.com/recipes/router-module
