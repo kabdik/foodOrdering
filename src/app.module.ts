@@ -25,7 +25,9 @@ import { ServerConfig } from './config/server.config';
 import { AdminJSModule } from './modules/adminjs/adminjs.module';
 import { CityModule } from './modules/cities/city.module';
 import { MealModule } from './modules/meal/meal.module';
+import { RestaurantManagerModule } from './modules/restaurant-manager/restaurant-manager.module';
 import { RestaurantModule } from './modules/restaurant/restaurant.module';
+import { UserModule } from './modules/user/user.module';
 
 @Module({
   imports: [
@@ -64,6 +66,8 @@ import { RestaurantModule } from './modules/restaurant/restaurant.module';
     // https://docs.nestjs.com/recipes/router-module
     RouterModule.register([]),
     MealModule,
+    UserModule,
+    RestaurantManagerModule,
   ],
   providers: [
     // Global Guard, Authentication check on all routers
