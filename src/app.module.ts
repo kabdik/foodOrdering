@@ -24,6 +24,7 @@ import { SentryConfig } from './config/sentry.config';
 import { ServerConfig } from './config/server.config';
 import { AdminJSModule } from './modules/adminjs/adminjs.module';
 import { CityModule } from './modules/cities/city.module';
+import { MealModule } from './modules/meal/meal.module';
 import { RestaurantModule } from './modules/restaurant/restaurant.module';
 
 @Module({
@@ -62,6 +63,7 @@ import { RestaurantModule } from './modules/restaurant/restaurant.module';
     // Module Router
     // https://docs.nestjs.com/recipes/router-module
     RouterModule.register([]),
+    MealModule,
   ],
   providers: [
     // Global Guard, Authentication check on all routers

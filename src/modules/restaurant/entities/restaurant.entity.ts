@@ -15,7 +15,7 @@ export class RestaurantEntity extends BaseEntity implements Restaurant {
     @Column('int')
     cityId!:number
 
-    @Column('decimal',{scale:1,default:0})
+    @Column('numeric',{scale:1,default:0.1,nullable:true})
     rating!:number
 
     @ManyToOne(()=>CityEntity,{
